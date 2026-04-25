@@ -301,6 +301,8 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     aspect-ratio: 1 / 1;
     background: #fff;
+    opacity: 1;
+    transform: none;
 }
 
 .portfolio-grid-img {
@@ -571,38 +573,38 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Animation Classes */
+/* Animation Classes - DISABLED */
 .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
+    opacity: 1;
+    transform: none;
+    transition: none;
 }
 
 .fade-in.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
 
 .slide-in-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 0.6s ease;
+    opacity: 1;
+    transform: none;
+    transition: none;
 }
 
 .slide-in-left.visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: none;
 }
 
 .slide-in-right {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: all 0.6s ease;
+    opacity: 1;
+    transform: none;
+    transition: none;
 }
 
 .slide-in-right.visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: none;
 }
 
 /* Hamburger Animation */
@@ -620,12 +622,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Loading Animation */
 body {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s ease;
 }
 
 body.loaded {
     opacity: 1;
 }
-
-/* Center alignment guide (debug) */
