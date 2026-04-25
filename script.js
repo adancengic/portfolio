@@ -58,10 +58,10 @@ const observer = new IntersectionObserver((entries) => {
 // Add animation classes to elements
 document.addEventListener('DOMContentLoaded', () => {
     // Add fade-in animation to sections
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.classList.add('fade-in');
-        observer.observe(section);
+    const itemsToObserve = document.querySelectorAll('section, .portfolio-item');
+    itemsToObserve.forEach(item => {
+        if (item.tagName === 'SECTION') item.classList.add('fade-in');
+        observer.observe(item);
     });
     
     // Add slide animations to about content
