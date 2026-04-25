@@ -44,14 +44,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-subtitle {
     text-align: center;
-    font-size: 0.7rem;
-    color: #555;
+    font-size: 1rem;
+    color: #000;
     font-weight: 400;
     letter-spacing: 6px;
     margin-bottom: 4rem;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 /* Navigation */
@@ -629,4 +629,3 @@ body.loaded {
 }
 
 /* Center alignment guide (debug) */
- 
