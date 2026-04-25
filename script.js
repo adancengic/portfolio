@@ -39,59 +39,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Intersection Observer for animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        } else {
-            entry.target.classList.remove('visible');
-        }
-    });
-}, observerOptions);
-
-// Add animation classes to elements
-document.addEventListener('DOMContentLoaded', () => {
-    // Add fade-in animation to sections
-    const itemsToObserve = document.querySelectorAll('section, .portfolio-item');
-    itemsToObserve.forEach(item => {
-        if (item.tagName === 'SECTION') item.classList.add('fade-in');
-        observer.observe(item);
-    });
-    
-    // Add slide animations to about content
-    const aboutText = document.querySelector('.about-text');
-    const aboutImage = document.querySelector('.about-image');
-    if (aboutText) {
-        aboutText.classList.add('slide-in-left');
-        observer.observe(aboutText);
-    }
-    if (aboutImage) {
-        aboutImage.classList.add('slide-in-right');
-        observer.observe(aboutImage);
-    }
-    
-    // Add fade-in animation to skillset section
-    const skillsetSection = document.querySelector('.skillset');
-    if (skillsetSection) {
-        skillsetSection.classList.add('fade-in');
-        observer.observe(skillsetSection);
-    }
-});
-
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-});
-
-
-// Navbar stays visible at all times
-
 // Portfolio fullscreen scroll functionality
 const portfolioImages = document.querySelectorAll('.portfolio-img-full');
 
@@ -135,3 +82,8 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Add loading animation
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
