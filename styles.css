@@ -42,6 +42,15 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 4px;
 }
 
+.section-title-small {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #000;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
 .section-subtitle {
     text-align: center;
     font-size: 1rem;
@@ -251,6 +260,12 @@ h1, h2, h3, h4, h5, h6 {
     background: #fff;
 }
 
+/* Artwork Section */
+.artwork {
+    padding: 5rem 0 5rem 0;
+    background: #fff;
+}
+
 .portfolio-fullscreen-section {
     padding-bottom: 5rem;
     background: #fff;
@@ -324,8 +339,49 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.1);
 }
 
+/* Artwork Gallery Grid */
+.artwork-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 0 auto 5rem auto;
+    padding: 0 20px;
+    max-width: 1000px;
+}
+
+.artwork-item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    background: #fff;
+    opacity: 1;
+    transform: none;
+}
+
+.artwork-grid-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: block;
+}
+
+.artwork-item:hover .artwork-grid-img {
+    transform: scale(1.1);
+}
+
 @media (max-width: 1100px) {
     .portfolio-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .artwork-gallery {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
@@ -333,6 +389,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 600px) {
     .portfolio-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .artwork-gallery {
         grid-template-columns: 1fr;
     }
 }
@@ -497,6 +557,10 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 2rem;
     }
     
+    .section-title-small {
+        font-size: 1.5rem;
+    }
+    
     .skillset-content {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -553,6 +617,10 @@ h1, h2, h3, h4, h5, h6 {
 
     .section-title {
         font-size: 1.5rem;
+    }
+    
+    .section-title-small {
+        font-size: 1.2rem;
     }
 
     .nav-menu {
